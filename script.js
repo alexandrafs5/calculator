@@ -57,6 +57,10 @@ erase.addEventListener("click", function(e){
     currentScreen.textContent = currentValue;
 })
 
+clear.addEventListener("click", function(){
+    handleClear();
+})
+
 function handleNumber(number) {
     if (currentValue.length <= 16) {
         currentValue += number;
@@ -77,4 +81,8 @@ function handlePoint() {
 
 function handleDelete() {
     currentValue = currentValue.slice(0, currentValue.length - 1);
+}
+
+function handleClear() {
+    location.reload();
 }
