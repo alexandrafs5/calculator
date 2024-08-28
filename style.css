@@ -21,7 +21,6 @@ body {
 
 .display {
     min-width: 282px;
-    height: 72px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 10px;
@@ -37,6 +36,11 @@ body {
 
 .previous {
     font-size: 19px;
+    height: 36px;
+}
+
+.current {
+    height: 36px;
 }
 
 .buttons {
