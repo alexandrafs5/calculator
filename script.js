@@ -48,7 +48,12 @@ equals.addEventListener("click", function() {
 })
 
 dot.addEventListener("click", function(e){
-    handlePoint(e.target.textContent)
+    handlePoint(e.target.textContent);
+    currentScreen.textContent = currentValue;
+})
+
+erase.addEventListener("click", function(e){
+    handleDelete(e.target.textContent);
     currentScreen.textContent = currentValue;
 })
 
@@ -68,4 +73,8 @@ function handlePoint() {
     if (currentValue.length <= 16) {
         currentValue += ".";
     }
+}
+
+function handleDelete() {
+    currentValue = currentValue.slice(0, currentValue.length - 1);
 }
