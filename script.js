@@ -86,3 +86,34 @@ function handleDelete() {
 function handleClear() {
     location.reload();
 }
+
+document.addEventListener('keydown', (event) => {
+	if (event.key === '+' || event.key === '-' || event.key === '*' || event.key === '/' || event.key === '%') {
+        operators.forEach(operator => {
+            if (operator.textContent === event.key) {
+                operator.textContent = event.key;
+                operator.click();
+            }
+        });
+	}
+    if (event.key === '1' || event.key === '2' || event.key === '3' || event.key === '4' || event.key === '5' || event.key === '6' || event.key === '7' || event.key === '8' || event.key === '9' || event.key === '0') {
+        numbers.forEach(number => {
+            if (number.textContent === event.key) {
+                number.textContent = event.key;
+                number.click();
+            }
+        });
+	}
+	if (event.key === 'Backspace' || event.key ==='c' || event.key === 'C') {
+		erase.click();	
+	}
+	if (event.key === '=' || event.key === 'Enter') {
+		equals.click();	
+	}
+	if (event.key === '.') {
+		dot.click();	
+	}
+    if (event.key === 'Escape') {
+		clear.click();	
+	}
+});
